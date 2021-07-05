@@ -26,6 +26,8 @@ public class Movie {
         if (result >= 0){
             freeSpaces = result;
         }
-        else throw new IllegalStateException("Not enough free spaces!");
+        else {
+            throw new IllegalStateException("Not enough free spaces!");
+        }
     }
 }

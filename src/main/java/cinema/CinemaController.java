@@ -42,13 +42,13 @@ public class CinemaController {
 
     @PostMapping("/{id}/reserve")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public MovieDTO reserveSpaces(@PathVariable("id") long id,@Valid @RequestBody CreateReservationCommand command){
+    public MovieDTO reserveSpaces(@PathVariable("id") long id, @Valid @RequestBody CreateReservationCommand command){
         return cinemaService.reserveSpaces(id, command);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public MovieDTO updateDate(@PathVariable("id") long id,@Valid @RequestBody UpdateDateCommand command){
+    public MovieDTO updateDate(@PathVariable("id") long id, @Valid @RequestBody UpdateDateCommand command){
         return cinemaService.updateDate(id, command);
     }
 
