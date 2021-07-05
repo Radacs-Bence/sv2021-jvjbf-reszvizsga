@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
@@ -18,7 +19,7 @@ public class CreateMovieCommand {
 
     private LocalDateTime date;
 
-    @Max(20)
+    @Min(20)
     private int maxReservation;
 
 }

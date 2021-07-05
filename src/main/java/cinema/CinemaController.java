@@ -99,7 +99,7 @@ public class CinemaController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Problem> notEnoughSpaces(IllegalStateException e){
         Problem problem = Problem.builder()
-                .withType(URI.create("cinema/not-enough-spaces"))
+                .withType(URI.create("cinema/bad-reservation"))
                 .withTitle("Not enough spaces for reservation")
                 .withStatus(Status.BAD_REQUEST)
                 .withDetail(e.getMessage()).build();

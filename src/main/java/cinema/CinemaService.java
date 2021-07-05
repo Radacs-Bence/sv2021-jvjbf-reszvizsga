@@ -39,7 +39,7 @@ public class CinemaService {
         return movies.stream()
                 .filter(instrument -> instrument.getId() == id)
                 .findAny()
-                .orElseThrow(() ->new IllegalArgumentException("Instrument not found: " + id));
+                .orElseThrow(() ->new IllegalArgumentException("Movie not found: " + id));
     }
 
     public MovieDTO createMovie(CreateMovieCommand command) {
